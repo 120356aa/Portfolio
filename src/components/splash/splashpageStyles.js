@@ -12,8 +12,6 @@ export const Wrap = styled.div`
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-
-  @media(min-width: 1100px) { border: 1px solid red; }
 `;
 
   export const Inner = styled.div`
@@ -26,6 +24,7 @@ export const Wrap = styled.div`
     export const ContentContainer = styled.div`
       text-align: center;
       margin-bottom: 70px;
+        @media(min-width: 1100px) { margin-bottom: 90px;}
     `;
 
       export const Heading = styled.h1`
@@ -36,10 +35,17 @@ export const Wrap = styled.div`
         margin-bottom: 10px;
         color: #fff;
         text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.25);
+          @media(min-width: 1100px) {
+            font-size: 46px;
+            margin-bottom: 12px;
+          }
           &:nth-of-type(even) {
             font-family: 'Oleo Script', cursive;
-            font-size: 48px;
+            font-size: 46px;
             text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.15);
+              @media(min-width: 1100px) {
+                font-size: 54px;
+              }
           }
       `;
 
@@ -48,6 +54,7 @@ export const Wrap = styled.div`
 
       export const ButtonText = styled(Heading)`
         font-size: 30px;
+          @media(min-width: 1100px) { font-size: 36px; }
       `;
 
       export const Button = styled.div`

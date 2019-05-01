@@ -91,7 +91,7 @@ export const Wrap = styled.div`
         font-family: 'Source Sans Pro', sans-serif;
         font-style: italic;
         font-weight: 300;
-        font-size: 30px;
+        font-size: ${props => props.isLoading ? '30px' : '60px'};
         margin-bottom: 10px;
         color: #fff;
         text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.25);

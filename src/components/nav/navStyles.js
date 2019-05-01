@@ -27,7 +27,7 @@ export const slideOutBottom = keyframes`
 export const Wrap = styled.div`
   width: 100%;
   height: 100vh;
-  background-color: #fff;
+  background-color: ${props => props.value ? '#fff' : '#fff'};
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;

@@ -1,11 +1,10 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import {
   Wrap,
   Inner,
   ContentContainer,
-  ButtonContainer,
-  Heading,
   ButtonText,
   Button,
 } from './splashpageStyles.js';
@@ -15,16 +14,16 @@ function SplashPage() {
     <Wrap>
       <Inner>
         <ContentContainer>
-          <Heading>Hi, my name is</Heading>
-          <Heading>Andrey Yurlov</Heading>
-          <Heading>welcome to my</Heading>
-          <Heading>Portfolio</Heading>
+          <h1>Hi, my name is</h1>
+          <h1>Andrey Yurlov</h1>
+          <h1>welcome to my</h1>
+          <h1>Portfolio</h1>
         </ContentContainer>
 
-        <ButtonContainer>
+        <Link to="/nav">
           <ButtonText>Start</ButtonText>
           <Button />
-        </ButtonContainer>
+        </Link>
       </Inner>
     </Wrap>
   );

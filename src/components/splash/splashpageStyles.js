@@ -50,6 +50,8 @@ export const Wrap = styled.div`
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
+
+      a { text-decoration: none; }
   `;
 
     export const ContentContainer = styled.div`

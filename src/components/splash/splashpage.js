@@ -5,8 +5,7 @@ import {
   Wrap,
   Inner,
   ContentContainer,
-  ButtonText,
-  Button,
+  StartButton,
 } from './splashpageStyles.js';
 
 function SplashPage() {
@@ -20,10 +19,10 @@ function SplashPage() {
           <h1>Portfolio</h1>
         </ContentContainer>
 
-        <Link to="/nav">
-          <ButtonText>Start</ButtonText>
-          <Button />
-        </Link>
+        <StartButton to="/nav">
+          <h4>Start</h4>
+          <div />
+        </StartButton>
       </Inner>
     </Wrap>
   );

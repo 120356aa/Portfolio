@@ -41,8 +41,8 @@ export const Wrap = styled.div`
   justify-content: center;
   align-items: center;
 
-    &.page-enter { animation: ${slideInTop} 0.2s forwards; }
-    &.page-exit { animation: ${slideOutTop} 0.2s forwards; }
+    &.page-enter { animation: ${slideInTop} 0.3s forwards; }
+    &.page-exit { animation: ${slideOutTop} 0.3s forwards; }
 `;
 
   export const Inner = styled.div`
@@ -83,26 +83,26 @@ export const Wrap = styled.div`
         }
     `;
 
-    export const ButtonContainer = styled(Link)`
+    export const StartButton = styled(Link)`
       text-decoration: none;
+
+        h4 {
+          font-family: 'Source Sans Pro', sans-serif;
+          font-style: italic;
+          font-weight: 300;
+          font-size: 30px;
+          margin-bottom: 10px;
+          color: #fff;
+          text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.25);
+            @media(min-width: 1100px) { font-size: 36px; }
+        }
+
+        div {
+          width: 0; 
+          height: 0; 
+          border-left: 18px solid transparent;
+          border-right: 18px solid transparent;
+          border-top: 22px solid #fff;
+          margin: 0px auto;
+        }
     `;
-
-      export const ButtonText = styled.h4`
-        font-family: 'Source Sans Pro', sans-serif;
-        font-style: italic;
-        font-weight: 300;
-        font-size: ${props => props.isLoading ? '30px' : '60px'};
-        margin-bottom: 10px;
-        color: #fff;
-        text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.25);
-          @media(min-width: 1100px) { font-size: 36px; }
-      `;
-
-      export const Button = styled.div`
-        width: 0; 
-        height: 0; 
-        border-left: 18px solid transparent;
-        border-right: 18px solid transparent;
-        border-top: 22px solid #fff;
-        margin: 0px auto;
-      `;

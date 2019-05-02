@@ -24,7 +24,7 @@ const Nav = () => {
           <img src={Skills} />
           <NavText>
             <p>Skills</p>
-            <p>Things I'm Good At</p>
+            <p>My strengths</p>
           </NavText>
         </NavItem>
 

@@ -74,6 +74,10 @@ export const Wrap = styled.div`
       align-items: center;
       opacity: 0;
       text-decoration: none;
+        &:hover {
+          p:nth-of-type(odd) { color: #7F4CED !important; }
+          // p:nth-of-type(even) { color: #4F2F92 !important; }
+        }
 
         &:nth-child(1) {
           margin-left: -4px;
@@ -111,7 +115,7 @@ export const Wrap = styled.div`
               margin: 0 86px 0 86px;
               animation: ${menuAnimation2} 0.2s forwards 0.35s ease-in-out;
             }
-            @media(min-width: 1280px) { margin: 0 120px 0 120px; }
+            @media(min-width: 1280px) { margin: 0 130px 0 130px; }
 
             p:nth-of-type(1) {
               font-size: 30px;

@@ -14,13 +14,13 @@ import {
 
 import Context from '../context.js';
 
-function Nav() {
+const Nav = () => {
   const value = useContext(Context);
 
   return (
     <Wrap>
       <Navigation>
-        <NavItem>
+        <NavItem to="/skills">
           <img src={Skills} />
           <NavText>
             <p>Skills</p>
@@ -28,15 +28,15 @@ function Nav() {
           </NavText>
         </NavItem>
 
-        <NavItem>
+        <NavItem to="/portfolio">
           <img src={Portfolio} />
           <NavText>
             <p>Portfolio</p>
             <p>All of My Projects</p>
           </NavText>
         </NavItem>
-        
-        <NavItem>
+
+        <NavItem to="/resume">
           <img src={Resume} />
           <NavText>
             <p>Resume</p>

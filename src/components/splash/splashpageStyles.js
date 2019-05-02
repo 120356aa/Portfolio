@@ -1,35 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom'; 
 import styled, { keyframes } from 'styled-components';
+import SplashPage from './splashpage.js';
 
 // font-family: 'Source Sans Pro', sans-serif;
 // font-family: 'Oleo Script', cursive;
-
-const slideInTop = keyframes`
-  from {
-    -webkit-transform: translate3d(0, -100%, 0);
-    transform: translate3d(0, -100%, 0);
-    visibility: visible;
-  }
-
-  to {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-  }
-`;
-
-const slideOutTop = keyframes`
-  from {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-  }
-
-  to {
-    visibility: hidden;
-    -webkit-transform: translate3d(0, 100%, 0);
-    transform: translate3d(0, 100%, 0);
-  }
-`;
 
 export const Wrap = styled.div`
   width: 100%;
@@ -40,9 +15,6 @@ export const Wrap = styled.div`
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-
-    &.page-enter { animation: ${slideInTop} 0.3s forwards; }
-    &.page-exit { animation: ${slideOutTop} 0.3s forwards; }
 `;
 
   export const Inner = styled.div`

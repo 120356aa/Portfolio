@@ -1,5 +1,5 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useContext } from 'react';
+import { Link, withRouter } from 'react-router-dom';
 
 import {
   Wrap,
@@ -8,7 +8,11 @@ import {
   StartButton,
 } from './splashpageStyles.js';
 
-function SplashPage() {
+import Context from '../context.js';
+
+const SplashPage = () => {
+  const value = useContext(Context);
+
   return (
     <Wrap>
       <Inner>
@@ -28,4 +32,4 @@ function SplashPage() {
   );
 };
 
-export default SplashPage;
+export default withRouter(SplashPage);

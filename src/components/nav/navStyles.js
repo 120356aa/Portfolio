@@ -1,26 +1,27 @@
 import styled, { keyframes } from 'styled-components';
+import { Link, withRouter } from 'react-router-dom';
 
-const slideInBottom = keyframes`
-  from {
-    transform: translate3d(0, 100%, 0);
-    visibility: visible;
-  }
-
-  to {
-    transform: translate3d(0, 0, 0);
-  }
+const slideInLeft = keyframes`
+from {
+  -webkit-transform: translate3d( 100%, 0, 0);
+  transform: translate3d( 100%, 0, 0);
+  visibility: visible;
+}
+to {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
 `;
 
-const slideOutBottom = keyframes`
+const slideOutRight = keyframes`
   from {
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
   }
-
   to {
     visibility: hidden;
-    -webkit-transform: translate3d(0, 100%, 0);
-    transform: translate3d(0, 100%, 0);
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
   }
 `;
 
@@ -29,7 +30,6 @@ const menuAnimation = keyframes`
     transform: translateX(30%);
     opacity: 0;
   }
-
   to {
     transform: translateX(0);
     opacity: 1;
@@ -45,8 +45,8 @@ export const Wrap = styled.div`
   justify-content: center;
   align-items: center;
 
-    &.page-enter { animation: ${slideInBottom} 0.2s forwards; }
-    &.page-exit { animation: ${slideOutBottom} 0.2s forwards; }
+    &.page-enter { animation: ${slideInLeft} 0.3s forwards; }
+    &.page-exit { animation:${slideOutRight} 0.3s forwards; }
 `;
 
   export const Navigation = styled.div`
@@ -56,11 +56,12 @@ export const Wrap = styled.div`
     align-items: center;
   `;
 
-    export const NavItem = styled.div`
+    export const NavItem = styled(Link)`
       display: flex;
       justify-content: flex-start;
       align-items: center;
       opacity: 0;
+      text-decoration: none;
         &:nth-child(1) {
           animation: ${menuAnimation} 0.2s forwards 0.3s ease-in-out;
           margin-left: -4px;

@@ -5,6 +5,7 @@ import { TransitionGroup, CSSTransition } from "react-transition-group";
 import LoadingPage from './components/loading/loading.js';
 import SplashPage from './components/splash/splashpage.js';
 import Nav from './components/nav/nav.js';
+import Skills from './components/skills/skillspage.js';
 
 import { Wrap } from './appStyles.js';
 
@@ -31,10 +32,11 @@ class App extends React.Component {
               return (
                 <Wrap>
                   <TransitionGroup component={null}>
-                    <CSSTransition timeout={1000} classNames="page" key={location.key}>
+                    <CSSTransition timeout={400} classNames="page" key={location.key}>
                       <Switch location={location}>
                         <Route exact path="/" component={SplashPage} />
                         <Route exact path="/nav" component={Nav} />
+                        <Route exact path="/skills" component={Skills} />
                       </Switch>
                     </CSSTransition>
                   </TransitionGroup>

@@ -11,6 +11,6 @@ export const Wrap = styled.div`
 `;
 
   export const InnerBox = styled.div`
-    border: 1px solid blue;
+    border: 1px solid red;
     width: 100%;
   `;

@@ -11,7 +11,7 @@ const Skills = () => {
     <Wrap>
       <Header />
       <InnerBox>
-        
+        <div className="heading">My Skills</div>
       </InnerBox>
     </Wrap>
   );

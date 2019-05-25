@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 export const Wrap = styled.div`
   width: 100%;
-  z-index: 2;
+  z-index: 3;
 `;
 
   export const Inner = styled.div`

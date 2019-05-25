@@ -22,8 +22,6 @@ export const Wrap = styled.div`
       }
 
       .menu {
-
-
         .menu_box {
           border: 2px solid #fff;
           margin: 6px 0 6px 0;

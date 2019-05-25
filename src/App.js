@@ -1,4 +1,4 @@
-import React, { createContext, useContext } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Route, Link, Switch, withRouter } from 'react-router-dom';
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 
@@ -9,45 +9,40 @@ import Skills from './components/skills/skillspage.js';
 
 import { Wrap } from './appStyles.js';
 
-import Context from './components/context.js';
+function App() {
+  const [loading, setLoading] = useState(true);
 
-class App extends React.Component {
-  state = {
-    isLoading: true,
-  }
+  useEffect(() => {
+    Loading();
+  }, []);
 
-  componentDidMount() {
+  const Loading = () => {
     setTimeout(() => {
-      this.setState({ isLoading: false });
+      setLoading(false);
     }, 0);
-  }
+  };
 
-  render() {
-    return (
-      <>
-        {this.state.isLoading ? <LoadingPage/> : (
-          <Context.Provider 
-            value={this.state}>
-            <Route render={({ location }) => {
-              return (
-                <Wrap>
-                  <TransitionGroup component={null}>
-                    <CSSTransition timeout={400} classNames="page" key={location.key}>
-                      <Switch location={location}>
-                        <Route exact path="/" component={SplashPage} />
-                        <Route exact path="/nav" component={Nav} />
-                        <Route exact path="/skills" component={Skills} />
-                      </Switch>
-                    </CSSTransition>
-                  </TransitionGroup>
-                </Wrap>
-              );
-            }}/>
-          </Context.Provider>
-        )}
-      </>
-    );
-  }
+  return (
+    <>
+      {loading ? <LoadingPage/> : (
+        <Route render={({ location }) => {
+          return (
+            <Wrap>
+              <TransitionGroup component={null}>
+                <CSSTransition timeout={400} classNames="page" key={location.key}>
+                  <Switch location={location}>
+                    <Route exact path="/" component={SplashPage} />
+                    <Route exact path="/nav" component={Nav} />
+                    <Route exact path="/skills" component={Skills} />
+                  </Switch>
+                </CSSTransition>
+              </TransitionGroup>
+            </Wrap>
+          );
+        }}/>
+      )}
+    </>
+  )
 }
 
 export default withRouter(App);

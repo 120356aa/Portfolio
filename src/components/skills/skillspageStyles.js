@@ -7,6 +7,10 @@ export const Wrap = styled.div`
   display: flex;
   background-color: #fff;
   flex-flow: column nowrap;
-  justify-content: center;
   align-items: center;
 `;
+
+  export const InnerBox = styled.div`
+    border: 1px solid blue;
+    width: 100%;
+  `;

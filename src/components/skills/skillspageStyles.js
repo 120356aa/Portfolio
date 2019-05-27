@@ -8,7 +8,7 @@ export const Wrap = styled.div`
   background-color: #fff;
   flex-flow: column nowrap;
   align-items: center;
-  z-index: 1;
+  // z-index: 1;
 `;
 
   export const InnerBox = styled.div`

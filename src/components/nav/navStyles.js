@@ -55,9 +55,11 @@ export const Wrap = styled.div`
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
+  z-index: 1;
+  position: relative;
 
-    &.page-enter { animation: ${slideInLeft} 0.3s forwards; }
-    &.page-exit { animation:${slideOutRight} 0.3s forwards; }
+    &.page-enter { animation: ${slideInLeft} 0.4s forwards; }
+    &.page-exit { animation:${slideOutRight} 0.4s forwards; }
 `;
 
   export const Navigation = styled.div`

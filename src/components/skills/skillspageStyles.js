@@ -1,42 +1,71 @@
 import styled from 'styled-components';
+import { colors, fonts, media } from '../../variables.js';
 
 export const Wrap = styled.div`
+  background-color: ${colors.white};
   width: 100%;
   height: 100%;
   position: absolute;
   display: flex;
-  background-color: #fff;
   flex-flow: column nowrap;
   align-items: center;
-  // z-index: 1;
 `;
 
   export const InnerBox = styled.div`
-    // border: 1px solid red;
     width: 100%;
 
     .heading {
-      font-family: 'Source Sans Pro', sans-serif;
+      font-family: ${fonts.primary};
+      color: ${colors.heading};
+      box-shadow: 0 0 8px ${colors.shadow};
       font-size: 26px;
       font-weight: 600;
-      color: #949494;
       text-align: center;
       padding: 15px 0 15px 0;
-      box-shadow: 0 0 8px #D2D2D2;
       z-index: 2;
       position: relative;
+        ${media.tablet} {
+          font-size: 28px;
+          padding: 18px 0 18px 0;
+        }
+        ${media.desktop} {
+          font-size: 30px;
+          padding: 20px 0 20px 0;
+        }
     }
 
     section {
       width: 100%;
       position: relative;
       z-index: 1;
+        ${media.tablet} {
+          display: flex;
+          flex-flow: row nowarp;
+          justify-content: center;
+        }
 
       .card {
         width: 100%;
-        padding: 36px 0 36px 0;
+        padding: 45px 0 45px 0;
           &:nth-child(odd) {
-            background-color: #F5F5F5;
+            background-color: ${colors.egg};
+              ${media.tablet} { background-color: ${colors.white}; }
+          }
+          
+          ${media.mobile} {
+            padding: 55px 0 55px 0;
+          }
+          ${media.tablet} {
+            width: 42%;
+            padding: 90px 0 0 0;
+          }
+          ${media.desktop} {
+            width: 460px;
+            padding: 100px 0 0 0;
+          }
+          ${media.large} {
+            width: 500px;
+            padding: 110px 0 20px 0;
           }
 
         .cardHeading {
@@ -44,24 +73,59 @@ export const Wrap = styled.div`
           justify-content: center;
           align-items: center;
 
+          div{
+            margin-right: 15px;
+              ${media.tablet} {
+                box-shadow: 0 0 6px ${colors.shadow};
+                padding: 15px;
+                border-radius: 50%;
+              }
+
+            img {
+              width: 38px;
+              height: 38px;
+            }
+          }
+
           h3 {
-            font-size: 20px;
-            font-weight: 400;
-            font-family: 'Source Sans Pro', sans-serif;
-            color: #797979;
+            font-family: ${fonts.primary};
+            color: ${colors.PHeading};
+            font-size: 19px;
+            font-weight: 600;
+              ${media.tablet} {
+                font-size: 22px;
+                color: ${colors.heading};
+                font-weight: 400;
+              }
+              ${media.desktop} { font-size: 24px; }
+              ${media.large} { font-size: 26px; }
           }
         }
 
         p {
-          text-align: center;
-          font-family: 'Source Sans Pro', sans-serif;
+          color: ${colors.P};
+          font-family: ${fonts.primary};
           font-weight: 300;
-          color: #808080;
+          text-align: center;
           font-size: 16px;
           width: 270px;
           margin: 0px auto;
           margin-top: 28px;
           line-height: 21px;
+            ${media.tablet} {
+              font-size: 17px;
+              line-height: 22px;
+            }
+            ${media.desktop} {
+              font-size: 18px;
+              line-height: 24px;
+              width: 300px;
+            }
+            ${media.large} {
+              font-size: 19px;
+              line-height: 26px;
+              width: 340px;
+            }
         }
       }
     }

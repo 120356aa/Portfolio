@@ -29,7 +29,7 @@ function App() {
           return (
             <Wrap>
               <TransitionGroup component={null}>
-                <CSSTransition timeout={400} classNames="page" key={location.key}>
+                <CSSTransition timeout={500} classNames="page" key={location.key}>
                   <Switch location={location}>
                     <Route exact path="/" component={SplashPage} />
                     <Route exact path="/nav" component={Nav} />

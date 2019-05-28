@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Link } from 'react-router-dom'; 
+import { colors, fonts, media } from '../../variables.js';
 
 export const Wrap = styled.div`
   width: 100%;
@@ -11,24 +11,24 @@ export const Wrap = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: linear-gradient(170deg, #6BDBEA 0%, #7F4CED 100%);
-      @media(min-width: 600px) { padding: 14px; }
-      @media(min-width: 900px) { padding: 16px; }
+    background: linear-gradient(170deg, ${colors.secondary} 0%, ${colors.primary} 100%);
+      ${media.mobile} { padding: 14px; }
+      ${media.tablet} { padding: 16px; }
 
       .logo {
-        font-family: 'Oleo Script', cursive;
+        font-family: ${fonts.secondary};
         font-size: 26px;
-        color: #fff;
-          @media(min-width: 600px) { font-size: 30px; }
+        color: ${colors.white};
+          ${media.mobile} { font-size: 30px; }
       }
 
       .menu {
         .menu_box {
-          border: 2px solid #fff;
+          border: 2px solid ${colors.white};
           margin: 5px 0 5px 0;
           width: 26px;
-            @media(min-width: 600px) { margin: 6px 0 6px 0; }
-            @media(min-width: 900px) { width: 30px; }
+            ${media.mobile} { margin: 6px 0 6px 0; }
+            ${media.tablet} { width: 30px; }
         }
       }
   `;

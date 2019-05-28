@@ -42,6 +42,10 @@ export const Wrap = styled.div`
           display: flex;
           flex-flow: row nowarp;
           justify-content: center;
+            &:nth-child(3) {
+              padding-bottom: 150px;
+              // border: 1px solid red;
+            }
         }
 
       .card {

@@ -1,5 +1,7 @@
 import React from 'react';
+
 import Header from '../header/header.js';
+import Footer from '../footer/footer.js';
 
 import imgJS from '../../assets/js.svg';
 import imgReact from '../../assets/react.svg';
@@ -62,6 +64,7 @@ const Skills = () => {
           </div>
         </section>
       </InnerBox>
+      <Footer />
     </Wrap>
   );
 };

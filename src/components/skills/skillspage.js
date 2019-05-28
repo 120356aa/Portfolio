@@ -52,7 +52,7 @@ const Skills = () => {
               Knex, sqLite3, Postgress as well as SQL.
             </p>
           </div>
-          <div className="card">
+          <div className="card last">
             <div className="cardHeading">
               <div><img src={imgDesign} /></div>
               <h3>Design</h3>

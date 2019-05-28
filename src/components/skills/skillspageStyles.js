@@ -132,5 +132,13 @@ export const Wrap = styled.div`
             }
         }
       }
+
+      .card.last {
+        padding: 45px 0 105px 0;
+          ${media.mobile} { padding: 55px 0 110px 0; }
+          ${media.tablet} { padding: 90px 0 0 0; }
+          ${media.desktop} { padding: 100px 0 0 0; }
+          ${media.large} { padding: 110px 0 20px 0; }
+      }
     }
   `;

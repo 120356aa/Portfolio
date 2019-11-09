@@ -14,7 +14,7 @@ const Footer = () => {
   const [contVis, setContVis] = useState(false);
 
   const toggleContact = () => {
-    setContVis(!contVis);
+    setContVis(!contVis); 
   }
 
   return (
@@ -23,7 +23,7 @@ const Footer = () => {
         <Inner>
           <a href="https://github.com/120356aa" target="_blank"><img src={Github} /></a>
           <a href="https://www.linkedin.com/in/andrew-yurlov-51b3b8150/" target="_blank"><img src={Linkedin} /></a>
-          <img src={Email} onClick={toggleContact} />
+          {/* <img src={Email} onClick={toggleContact} /> */}
         </Inner>
       </Wrap>
 

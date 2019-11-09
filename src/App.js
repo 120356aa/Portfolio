@@ -6,6 +6,7 @@ import LoadingPage from './components/loading/loading.js';
 import SplashPage from './components/splash/splashpage.js';
 import Nav from './components/nav/nav.js';
 import Skills from './components/skills/skillspage.js';
+import Portfolio from './components/portfolio/portfolio';
 
 import { Wrap } from './appStyles.js';
 
@@ -29,11 +30,12 @@ function App() {
           return (
             <Wrap>
               <TransitionGroup component={null}>
-                <CSSTransition timeout={500} classNames="page" key={location.key}>
+                <CSSTransition timeout={400} classNames="page" key={location.key}>
                   <Switch location={location}>
                     <Route exact path="/" component={SplashPage} />
                     <Route exact path="/nav" component={Nav} />
                     <Route exact path="/skills" component={Skills} />
+                    <Route exact path="/portfolio" component={Portfolio} />
                   </Switch>
                 </CSSTransition>
               </TransitionGroup>

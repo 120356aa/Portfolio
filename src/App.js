@@ -7,6 +7,7 @@ import SplashPage from './components/splash/splashpage.js';
 import Nav from './components/nav/nav.js';
 import Skills from './components/skills/skillspage.js';
 import Portfolio from './components/portfolio/portfolio';
+import Resume from './components/resume/resume';
 
 import { Wrap } from './appStyles.js';
 
@@ -36,6 +37,7 @@ function App() {
                     <Route exact path="/nav" component={Nav} />
                     <Route exact path="/skills" component={Skills} />
                     <Route exact path="/portfolio" component={Portfolio} />
+                    <Route exact path="/resume" component={Resume} />
                   </Switch>
                 </CSSTransition>
               </TransitionGroup>

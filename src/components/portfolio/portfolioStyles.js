@@ -1,10 +1,19 @@
 import styled from 'styled-components';
+
 import { fonts, colors, media } from '../../variables';
+import Alpha from '../../assets/alphavisuals.jpg';
+import PizzaTime from '../../assets/pizzatime.jpg';
+import K9 from '../../assets/k9pawdecor.jpg';
+import PSite from '../../assets/andreyyurlov.jpg';
 
 export const Wrap = styled.div`
     width: 100%;
-    height: 100%;
+    height: 100vh;
     background-color: ${colors.white};
+    // display: flex;
+    // flex-flow: column nowrap;
+    // justify-content: center;
+    // align-items: center;
 
     ${media.desktop} {
         display: flex;
@@ -16,11 +25,16 @@ export const Wrap = styled.div`
     .section {
         width: 100%;
         // border: 1px solid blue;
-        padding: 40px 0;
+        padding: 20px 0 0 0;
         display: flex;
-        flex-flow: column nowrap
+        flex-flow: column;
+        flex-wrap: wrap;
         justify-content: space-between;
         align-items: center;
+
+        &:nth-of-type(2) {
+            margin: 0 0 100px 0;
+        }
 
         ${media.tablet} {
             flex-flow: row nowrap;
@@ -54,35 +68,57 @@ export const Wrap = styled.div`
 
             }
 
+            .view.alpha {
+                background: url('${Alpha}');
+                background-size: cover;
+            }
+
+            .view.pizzatime {
+                background: url('${PizzaTime}');
+                background-size: cover;
+            }
+
+            .view.psite {
+                background: url('${PSite}');
+                background-size: cover;
+            }
+
             .view {
                 width: 100%;
-                height: 160px;
-                background-color: ${colors.secondary};
-                // border: 1px solid blue;
+                height: 140px;
 
                 &:hover {
-                    background-color: ${colors.shadow};
+                    ${media.desktop} {
+                        background-color: ${colors.shadow};
+                    }
+                    
                     .view_hover {
-                        width: 100%;
-                        height: 100%;
-                        // border: 1px solid red;
-                        display: flex;
-                        flex-flow: row nowrap;
-                        justify-content: center;
-                        align-items: center;
-                        outline: 2px solid ${colors.shadow};
+                        display: none;
+
+                        ${media.desktop} {
+                            width: 100%;
+                            height: 100%;
+                            // border: 1px solid red;
+                            display: flex;
+                            flex-flow: row nowrap;
+                            justify-content: center;
+                            align-items: center;
+                            outline: 2px solid ${colors.shadow};
+                        }
                     }
                 }
 
                 .view_hover {
                     display: none;
 
-                    button  {
+                    a {
+                        text-decoration: none;
+                        text-align: center;
                         // border: 3px solid ${colors.heading};
                         border: none;
                         background-color: ${colors.heading};
-                        padding: 8px 10px;
-                        width: 80px;
+                        padding: 10px 10px;
+                        width: 60px;
                         font-family: ${fonts.primary};
                         font-weight: 600;
                         font-size: 16px;
@@ -91,6 +127,61 @@ export const Wrap = styled.div`
                         &:hover { background-color: ${colors.primary}; }
                         &:nth-of-type(1) { margin-right: 5px; }
                         &:nth-of-type(2) { margin-left: 5px; }
+                    }
+                }
+            }
+
+            .info {
+                .desc {
+                    padding: 28px 28px;
+
+                    h3 {
+                        font-family: ${fonts.primary};
+                        color: ${colors.heading};
+                        font-size: 26px;
+                        font-weight: 700;
+                    }
+
+                    p {
+                        margin-top: 10px;
+                        font-family: ${fonts.primary};
+                        font-size: 16px;
+                        color: ${colors.black};
+
+                        span { font-weight: 600; }
+
+                        &:nth-of-type(1) {
+                            margin-top: 20px;
+                        }
+                    }
+                }
+
+                .mobile_btns {
+                    width: 100%;
+                    // border: 1px solid red;
+                    padding: 15px 0;
+                    display: flex;
+                    flex-flow: row nowrap;
+                    justify-content: center;
+                    aling-items: center;
+    
+                    a {
+                        // border: 3px solid ${colors.heading};
+                        border: none;
+                        background-color: ${colors.heading};
+                        padding: 10px 10px;
+                        width: 34%;
+                        text-decoration: none;
+                        text-align: center;
+                        font-family: ${fonts.primary};
+                        font-weight: 600;
+                        font-size: 16px;
+                        color: ${colors.white};
+                        // margin: 0 0 0 10px;
+    
+                        &:hover { background-color: ${colors.primary}; }
+                        &:nth-of-type(1) { margin-right: 8px; }
+                        &:nth-of-type(2) { margin-left: 8px; }
                     }
                 }
             }

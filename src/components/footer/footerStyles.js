@@ -9,8 +9,8 @@ export const Wrap = styled.div`
   position: fixed;
   bottom: 0;
   background-color: ${colors.white};
-    ${media.tablet} { padding: 18px 0 18px 0; }
-    ${media.desktop} { padding: 20px 0 20px 0; }
+    // ${media.tablet} { padding: 18px 0 18px 0; }
+    // ${media.desktop} { padding: 20px 0 20px 0; }
 `;
 
   export const Inner = styled.div`

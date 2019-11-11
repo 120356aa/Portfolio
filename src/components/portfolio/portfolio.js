@@ -11,8 +11,28 @@ const Portfolio = () => {
             <Header />
             <div className="section">
                 <div className="card">
-                    <div className="view"></div>
-                    <div className="info"></div>
+                    <div className="view">
+                        <div className="view_hover">
+                            <button>Github</button>
+                            <button>Demo</button>
+                        </div>
+                    </div>
+                </div>
+                <div className="card">
+                    <div className="view">
+                        <div className="view_hover">
+                            <button>Github</button>
+                            <button>Demo</button>
+                        </div>
+                    </div>
+                </div>
+                <div className="card">
+                    <div className="view">
+                        <div className="view_hover">
+                            <button>Github</button>
+                            <button>Demo</button>
+                        </div>
+                    </div>
                 </div>
             </div>
             <Footer />

@@ -9,6 +9,7 @@ const Portfolio = () => {
     return (
         <Wrap>
             <Header />
+            <div className="heading">My Portfolio</div>
             <div className="section">
                 <div className="card">
                     <div className="view alpha">

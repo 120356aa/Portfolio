@@ -22,10 +22,31 @@ export const Wrap = styled.div`
         align-items: center;
     }
 
+    .heading {
+        width: 100%;
+        font-family: ${fonts.primary};
+        color: ${colors.heading};
+        box-shadow: 0 0 8px ${colors.shadow};
+        font-size: 26px;
+        font-weight: 600;
+        text-align: center;
+        padding: 15px 0 15px 0;
+        z-index: 2;
+        position: relative;
+          ${media.tablet} {
+            font-size: 28px;
+            padding: 18px 0 18px 0;
+          }
+          ${media.desktop} {
+            font-size: 30px;
+            padding: 20px 0 20px 0;
+          }
+      }
+
     .section {
         width: 100%;
         // border: 1px solid blue;
-        padding: 20px 0 0 0;
+        padding: 40px 0 0 0;
         display: flex;
         flex-flow: column;
         flex-wrap: wrap;
@@ -49,7 +70,7 @@ export const Wrap = styled.div`
         .card {
             width: 280px;
             // border: 1px solid red;
-            margin: 20px 0;
+            margin: 26px 0;
             box-shadow: 0 2px 5px ${colors.shadow};
 
             

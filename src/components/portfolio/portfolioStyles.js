@@ -10,6 +10,7 @@ export const Wrap = styled.div`
     width: 100%;
     height: 100vh;
     background-color: ${colors.white};
+    position: absolute;
     // display: flex;
     // flex-flow: column nowrap;
     // justify-content: center;
@@ -46,7 +47,7 @@ export const Wrap = styled.div`
     .section {
         width: 100%;
         // border: 1px solid blue;
-        padding: 40px 0 0 0;
+        padding: 40px 0 60px 0;
         display: flex;
         flex-flow: column;
         flex-wrap: wrap;
@@ -60,6 +61,7 @@ export const Wrap = styled.div`
         ${media.tablet} {
             flex-flow: row nowrap;
             justify-content: space-evenly
+            padding: 40px 0 100px 0;
         }
 
         ${media.desktop} {
@@ -161,10 +163,14 @@ export const Wrap = styled.div`
                         color: ${colors.heading};
                         font-size: 26px;
                         font-weight: 700;
+
+                        ${media.desktop} {
+                            font-size: 30px;
+                        }
                     }
 
                     p {
-                        margin-top: 10px;
+                        margin-top: 8px;
                         font-family: ${fonts.primary};
                         font-size: 16px;
                         color: ${colors.black};
@@ -172,7 +178,7 @@ export const Wrap = styled.div`
                         span { font-weight: 600; }
 
                         &:nth-of-type(1) {
-                            margin-top: 20px;
+                            margin-top: 28px;
                         }
                     }
                 }

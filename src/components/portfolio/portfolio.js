@@ -80,14 +80,14 @@ const Portfolio = () => {
                     </div>
                     <div className="info">
                         <div className="desc">
-                            <h3>K9 Paw Decor</h3>
-                            <p><span>Status: </span>Under Development</p>
-                            <p><span>Type: </span>Client</p>
+                            <h3>Portfolio</h3>
+                            <p><span>Status: </span>Refactoring / Features </p>
+                            <p><span>Type: </span>Personal</p>
                             <p><span>Framework: </span>React</p>
                         </div>
                         <div className="mobile_btns">
-                            <a href="https://github.com/120356aa/mepaws/tree/development" target="_blank">Github</a>
-                            <a href="https://k9decor-dev.netlify.com/" target="_blank">Demo</a>
+                            <a href="https://github.com/120356aa/portfolio/tree/development" target="_blank">Github</a>
+                            <a href="https://andreyyurlov.netlify.com/" target="_blank">Demo</a>
                         </div>
                     </div>
                 </div>

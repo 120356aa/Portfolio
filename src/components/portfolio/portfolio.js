@@ -26,8 +26,8 @@ const Portfolio = () => {
                             <p><span>Framework: </span>React</p>
                         </div>
                         <div className="mobile_btns">
-                            <a href="https://alphavisuals.netlify.com/" target="_blank">Github</a>
-                            <a href="https://github.com/120356aa/alphavisuals" target="_blank">Demo</a>
+                            <a href="https://github.com/120356aa/alphavisuals" target="_blank">Github</a>
+                            <a href="https://alphavisuals.netlify.com/" target="_blank">Demo</a>
                         </div>
                     </div>
                 </div>
@@ -47,7 +47,7 @@ const Portfolio = () => {
                         </div>
                         <div className="mobile_btns">
                             <a href="https://github.com/pizza-tim3/pizza-tim3-front/tree/master/pizza-time" target="_blank">Github</a>
-                            <a href="https://www.pizzatime.life/login" target="_blank">Demo</a>
+                            <a href="https://www.pizzatime.life/" target="_blank">Demo</a>
                         </div>
                     </div>
                 </div>

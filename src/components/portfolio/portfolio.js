@@ -31,13 +31,13 @@ const Portfolio = () => {
                         </div>
                     </div>
                 </div>
-                <div className="card">
-                    <div className="view pizzatime">
+                {/* <div className="card">
+                    <div className="view pizzatime"> */}
                         {/* <div className="view_hover">
                             <a href="https://github.com/pizza-tim3/pizza-tim3-front/tree/master/pizza-time" target="_blank">Github</a>
                             <a href="https://www.pizzatime.life/login" target="_blank">Demo</a>
                         </div> */}
-                    </div>
+                    {/* </div>
                     <div className="info">
                         <div className="desc">
                             <h3>Pizza Time</h3>
@@ -50,7 +50,7 @@ const Portfolio = () => {
                             <a href="https://www.pizzatime.life/" target="_blank">Demo</a>
                         </div>
                     </div>
-                </div>
+                </div> */}
                 {/* <div className="card">
                     <div className="view">
                         <div className="view_hover">
